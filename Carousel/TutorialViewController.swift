@@ -16,8 +16,10 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var imageTakeCarouselForASpin: UIImageView!
     
+    @IBOutlet weak var buttonTakeCarouselForASpin: UIButton!
     
     @IBAction func onTakeForASpin(sender: AnyObject) {
+        
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
@@ -26,23 +28,29 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         
         // Set the current page, so the dots will update
         pageControl.currentPage = page
-        
-        //imageTakeCarouselForASpin.alpha = 0
+
         print(page)
         print(" x ")
         print(imageTakeCarouselForASpin.alpha)
-        if(page == 3) {
-            
-            imageTakeCarouselForASpin.alpha = 1
 
+        
+        if (page == 3) {
+            UIView.animateWithDuration(0.7, animations: {
+                self.pageControl.alpha = 0;
+                self.imageTakeCarouselForASpin.alpha = 1;
+                self.buttonTakeCarouselForASpin.alpha = 1;
+            })
+        } else {
+            UIView.animateWithDuration(0.7, animations: {
+                self.pageControl.alpha = 1;
+                self.imageTakeCarouselForASpin.alpha = 0;
+                self.buttonTakeCarouselForASpin.alpha = 0;
+            })
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        imageTakeCarouselForASpin.alpha = 0
         
         scrollView.delegate = self
         scrollView.contentSize = CGSizeMake(1280, 568)
