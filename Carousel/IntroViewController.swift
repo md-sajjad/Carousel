@@ -66,7 +66,7 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView!) {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
         //print(scrollView.center.x);
         //print(scrollView.center.y);
         
