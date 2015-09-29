@@ -14,6 +14,7 @@
 		4AA43B4C1BB8D511004DF6CF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA43B4B1BB8D511004DF6CF /* Common.swift */; };
 		4AA43B4F1BB8D60C004DF6CF /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA43B4E1BB8D60C004DF6CF /* IntroViewController.swift */; };
 		4AF0D0B51BB8F9C1002F53EB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF0D0B41BB8F9C1002F53EB /* SignInViewController.swift */; };
+		4AF0D0B71BBA2592002F53EB /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF0D0B61BBA2592002F53EB /* TutorialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4AA43B4B1BB8D511004DF6CF /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		4AA43B4E1BB8D60C004DF6CF /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		4AF0D0B41BB8F9C1002F53EB /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		4AF0D0B61BBA2592002F53EB /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				4AA43B4E1BB8D60C004DF6CF /* IntroViewController.swift */,
 				4AF0D0B41BB8F9C1002F53EB /* SignInViewController.swift */,
+				4AF0D0B61BBA2592002F53EB /* TutorialViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				4AF0D0B51BB8F9C1002F53EB /* SignInViewController.swift in Sources */,
 				4AA43B4C1BB8D511004DF6CF /* Common.swift in Sources */,
+				4AF0D0B71BBA2592002F53EB /* TutorialViewController.swift in Sources */,
 				4AA43B2C1BB8CC07004DF6CF /* AppDelegate.swift in Sources */,
 				4AA43B4F1BB8D60C004DF6CF /* IntroViewController.swift in Sources */,
 			);

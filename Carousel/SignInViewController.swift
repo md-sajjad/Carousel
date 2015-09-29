@@ -13,6 +13,8 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var activityIndicatorSignIn: UIActivityIndicatorView!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var signInButtonView: UIView!
@@ -32,6 +34,50 @@ class SignInViewController: UIViewController {
         signInViewInitialY = signInButtonView.center.y
     }
 
+    @IBAction func onSignIn(sender: AnyObject)
+    {
+        emailTextField.endEditing(true)
+        passwordTextField.endEditing(true)
+        
+        if emailTextField.text!.isEmpty && passwordTextField.text!.isEmpty
+        {
+            presentOKAlert("Email & Password are empty!")
+        }
+        else if emailTextField.text!.isEmpty
+        {
+            presentOKAlert("Email is empty!")
+        }
+        else if passwordTextField.text!.isEmpty
+        {
+            presentOKAlert("Password is empty!")
+        }
+        else {
+            activityIndicatorSignIn.startAnimating()
+            delay(3)
+            {
+                self.activityIndicatorSignIn.stopAnimating()
+                if (self.emailTextField.text != "u" || self.passwordTextField.text != "p")
+                {
+                    self.presentOKAlert("Email and/or Password combination is invalid")
+                }
+                else {
+                    let vc : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("TutorialViewController")
+                    self.showViewController(vc as! UIViewController, sender: vc)
+                }
+            }
+        }
+    }
+    
+    func presentOKAlert(alertMessage : String) {
+        let alertController = UIAlertController(title: "Incorrect Credentials", message: alertMessage, preferredStyle: .Alert)
+        // create an OK action
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            // handle response here.
+        }
+        alertController.addAction(OKAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
